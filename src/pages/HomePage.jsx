@@ -3,17 +3,21 @@ import React from "react";
 import AboutUs from "./pages/AboutUs";
 import Nav from "./components/Nav";
 import GlobalStyle from "./components/GlobalStyle";
-import CourseDetail from "./pages/CourseDetail";
+import Courses from "./pages/Courses";
+import ContactUs from "./pages/ContactUs";
+// import CourseDetail from "./pages/CourseDetail";
 
-function App() {
+function HomePage() {
   return (
     <div>
       <GlobalStyle />
       <Nav />
       <AboutUs />
-      <CourseDetail/>
+      {/* <Courses /> */}
+      {/* <CourseDetail /> */}
+      {/* <ContactUs /> */}
     </div>
   );
 }
 
-export default App;
+export default HomePage;

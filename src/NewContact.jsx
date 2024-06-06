@@ -1,19 +1,17 @@
 import React from "react";
 // import { useState } from "react";
-import AboutUs from "./pages/AboutUs";
 import Nav from "./components/Nav";
 import GlobalStyle from "./components/GlobalStyle";
-import CourseDetail from "./pages/CourseDetail";
+import ContactUs from "./pages/ContactUs";
 
-function App() {
+function NewContactUs() {
   return (
     <div>
       <GlobalStyle />
       <Nav />
-      <AboutUs />
-      <CourseDetail/>
+      <ContactUs />
     </div>
   );
 }
 
-export default App;
+export default NewContactUs;

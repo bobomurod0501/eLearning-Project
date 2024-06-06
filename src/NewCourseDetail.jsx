@@ -5,15 +5,15 @@ import Nav from "./components/Nav";
 import GlobalStyle from "./components/GlobalStyle";
 import CourseDetail from "./pages/CourseDetail";
 
-function App() {
+function NewCourseDetail() {
   return (
     <div>
       <GlobalStyle />
       <Nav />
-      <AboutUs />
+      {/* <AboutUs /> */}
       <CourseDetail/>
     </div>
   );
 }
 
-export default App;
+export default NewCourseDetail;
