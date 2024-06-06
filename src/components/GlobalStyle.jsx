@@ -50,4 +50,5 @@ const GlobalStyle = createGlobalStyle`
         font-size: 1.4rem;
     }
 `
+
 export default GlobalStyle

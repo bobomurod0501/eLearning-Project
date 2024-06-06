@@ -1,30 +1,35 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
-// import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { useLocation } from "react-router-dom";
+
 
 const Nav = () => {
     const {pathname} = useLocation()
     return <StyledNav>
         <h1>
-            <a id="logo" href="/">e-learning</a>
+            <Link id="logo" to="/">e-learning</Link>
         </h1>
         <ul>
             <li>
-                <a href="/">About us</a>
+                <Link to="/">About us</Link>
                 <Line transition={{duration:0.75}} initial={{width:"0%"}} animate={{width: pathname === "/" ? "100%" : "0%"}}/>
             </li>
             <li>
-                <a href="/courses">Courses</a>
-                <Line transition={{duration:0.75}} initial={{width:"0%"}} animate={{width: pathname === "/courses" ? "100%" : "0%"}}/>
+                <Link to="/courses">Courses</Link>
+                <Line transition={{duration:0.61}} initial={{width:"0%"}} animate={{width: pathname === "/courses" ? "100%" : "0%"}}/>
+                 <Line transition={{duration:0.61}} initial={{width:"0%"}} animate={{width: pathname === "/courses/react" ? "100%" : "0%"}}/>
+                 <Line transition={{duration:0.61}} initial={{width:"0%"}} animate={{width: pathname === "/courses/javascript" ? "100%" : "0%"}}/>
+                 <Line transition={{duration:0.61}} initial={{width:"0%"}} animate={{width: pathname === "/courses/soon" ? "100%" : "0%"}}/>
                 </li>
             <li>
-                <a href="/contact">Contact us</a>
+                <Link to="/contact">Contact us</Link>
                 <Line transition={{duration:0.75}} initial={{width:"0%"}} animate={{width: pathname === "/contact" ? "100%" : "0%"}}/>
                 </li>
         </ul>
     </StyledNav>
+    
 }
 const StyledNav = styled.nav`
     min-height: 15vh;
@@ -37,6 +42,7 @@ const StyledNav = styled.nav`
         text-decoration: none;
         color: #fff;
         font-size: 1.2rem;
+        
     }
     ul{
         display: flex;

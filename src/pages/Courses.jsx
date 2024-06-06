@@ -6,31 +6,34 @@ import ReactLogo from "../images/react.avif";
 import Soon from "../images/Coming-Soon-Logo.jpg";
 import { motion } from "framer-motion";
 import { pageAnimaton } from "../Animation";
+import { useLocation } from "react-router-dom";
 
 const Courses = () => {
+  const {pathname} = useLocation()
   return (
 
       <StyledCourses variants={pageAnimaton} initial="hidden" animate="show">
         <Course>
           <h2>Interactive React</h2>
           <div className="line"></div>
-          <a href="/courses/react">
+          <Link to="/courses/react">
             <img src={ReactLogo} alt="" />
-          </a>
+          </Link>
+          
         </Course>
         <Course>
           <h2>Interactive JavaScript</h2>
           <div className="line"></div>
-          <a href="/courses/javascript">
+          <Link to="/courses/javascript">
             <img src={Javascript1} alt="" />
-          </a>
+          </Link>
         </Course>
         <Course>
           <h2>Soon...</h2>
           <div className="line"></div>
-          <a href="/courses/soon">
+          <Link to="/courses/soon">
             <img src={Soon} alt="" />
-          </a>
+          </Link>
         </Course>
       </StyledCourses>
   );
@@ -61,5 +64,9 @@ const CoursesBox = styled.div`
     padding: 0;
     box-sizing: border-box;
 `
-
+const Line = styled(motion.div)`
+  width: 100%;
+  height: 0.2rem;
+  background-color: #ff80ed;
+`
 export default Courses;

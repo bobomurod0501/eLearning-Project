@@ -4,6 +4,8 @@ import { About } from "../Style";
 import Toggle from "./FaqToggle";
 // import { AnimateSharedLayout } from "framer-motion";
 import { LayoutGroup, motion } from "framer-motion";
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
 
 const FaqSection = () => {
   return (
@@ -41,8 +43,7 @@ const FaqSection = () => {
           <div className="answer">
             <p>Lorem ipsum dolor sit amet.</p>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis,
-              dignissimos!
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fuga nisi ad error rerum suscipit aliquam velit? Quas dolores sed dignissimos alias a quibusdam, natus quos quaerat culpa illum eius facilis!
             </p>
           </div>
           
@@ -66,6 +67,7 @@ const FaqSection = () => {
 
 const Faq = styled(About)`
   display: block;
+  color:#9a9a9a;
   h2 {
     padding-bottom: 2rem;
     font-weight: lighter;
@@ -83,7 +85,15 @@ const Faq = styled(About)`
     width: 100%;
     height: 0.2rem;
   }
+  @media screen and (max-width:1000px){
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    width: 120%;
+  }
 `;
+
 
 
 export default FaqSection;
